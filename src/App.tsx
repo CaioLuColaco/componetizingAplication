@@ -3,15 +3,14 @@ import { useEffect, useState } from 'react';
 import { Button } from './components/Button';
 import { MovieCard } from './components/MovieCard';
 
-// import { SideBar } from './components/SideBar';
-// import { Content } from './components/Content';
+import { SideBar } from './components/SideBar';
+import { Content } from './components/Content';
 
 import { api } from './services/api';
 
 import './styles/global.scss';
 
 import './styles/sidebar.scss';
-import './styles/content.scss';
 
 interface GenreResponseProps {
   id: number;
@@ -60,6 +59,7 @@ export function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
+      {/* <SideBar /> */}
       <nav className="sidebar">
         <span>Watch<p>Me</p></span>
 
@@ -77,7 +77,8 @@ export function App() {
 
       </nav>
 
-      <div className="container">
+      <Content movies={movies} selectedGenre={selectedGenre}/>
+      {/* <div className="container">
         <header>
           <span className="category">Categoria:<span> {selectedGenre.title}</span></span>
         </header>
@@ -89,7 +90,7 @@ export function App() {
             ))}
           </div>
         </main>
-      </div>
+      </div> */}
     </div>
   )
 }
