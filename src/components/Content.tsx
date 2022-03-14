@@ -3,7 +3,6 @@ import { MovieCard } from './MovieCard';
 
 import '../styles/content.scss';
 
-
 interface props {
   selectedGenre: {title: string};
   movies: Array<{
